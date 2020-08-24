@@ -1,0 +1,26 @@
+.header-menu
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    @include md
+    {
+        background-color: rgba($color-gray-dark, .25);
+    }
+    &__container
+    {
+        display: grid;
+
+        max-width: $ul;
+        margin: auto;
+        padding-right: $gap;
+        padding-left: $gap;
+
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+}

@@ -1,0 +1,124 @@
+    .header-navbar
+{
+    display: grid;
+
+    justify-items: end;
+    &__list
+    {
+        display: grid;
+
+        margin: 0 -20px 0 0;
+        padding: 0;
+
+        list-style: none;
+
+        letter-spacing: .10em;
+
+        grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+        justify-content: end;
+        @include md-min
+        {
+            display: grid;
+
+            width: 100%;
+
+            justify-content: end;
+            grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+        }
+        @include md
+        {
+            position: absolute;
+            top: 100%;
+            right: 40px;
+
+            display: none;
+
+            text-align: right;
+
+            background-color: rgba($color-gray-dark, .5);
+        }
+    }
+    &__link
+    {
+        font-size: 1.125rem;
+
+        display: block;
+
+        padding: 20px;
+
+        transition: color .5s;
+    }
+    &__link:focus,
+    &__link:hover
+    {
+        color: $color-accent;
+    }
+    &__btn
+    {
+        position: relative;
+
+        width: 30px;
+        height: 22.5px;
+        margin: 25px 0;
+
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        transform: rotate(0deg);
+
+        @include md-min
+        {
+            display: none;
+        }
+        @include md
+        {
+            display: block;
+        }
+        &-row
+        {
+            position: absolute;
+            left: 0;
+
+            display: block;
+
+            width: 100%;
+            height: 3px;
+
+            transition: .25s ease-in-out;
+            transform: rotate(0deg);
+
+            opacity: 1;
+            border-radius: 3px;
+            background: $color-light;
+            &:nth-child(1)
+            {
+                top: 0;
+            }
+            &:nth-child(2)
+            {
+                top: 9px;
+            }
+            &:nth-child(3)
+            {
+                top: 18px;
+            }
+            &--active span:nth-child(1)
+            {
+                top: 9px;
+
+                transform: rotate(135deg);
+            }
+            &--active span:nth-child(2)
+            {
+                left: -30px;
+
+                opacity: 0;
+            }
+            &--active span:nth-child(3)
+            {
+                top: 9px;
+
+                transform: rotate(-135deg);
+            }
+        }
+    }
+}
