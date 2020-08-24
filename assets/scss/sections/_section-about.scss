@@ -64,6 +64,9 @@
             max-width: 414px;
             letter-spacing: .055em;
         }
+        @include sm {
+            max-width: max-content;
+        }
     }
     
     .about-overlay p:first-of-type {
@@ -95,6 +98,9 @@
         }
         @include lg {
             right: -22px;
+        }
+        @include sm {
+            display: none;
         }
     }
     
