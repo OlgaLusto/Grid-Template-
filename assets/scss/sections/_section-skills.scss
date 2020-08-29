@@ -10,9 +10,6 @@
         overflow: hidden;
         min-height: calc(33.33vh - 2px);
         background-color: $color-primary;
-        // @include md-sm {
-        //     min-height: calc(33.33vh +10px);
-        // }
         @include lg-md {
             min-height: calc(33.33vh + 1.5px);
         }

@@ -22,7 +22,6 @@
         @include md {
             font-size: 1.5rem;
             max-width: max-content;
-            //margin: 12px auto 35px auto;
             letter-spacing: 0.15rem;
             margin: 12px 0 40px 0;
         }
@@ -49,7 +48,6 @@
         }
         @include sm {
             display: block;
-            //margin-bottom: 500px;
         }
     }
     
@@ -94,17 +92,13 @@
         grid-template-areas: 'b1' 'b2';
         @include lg {
             grid-template-rows: 300px 274px;
-            // max-height: 494px;
             margin: 0;
-            //padding: 20px;
             max-height: 600px;
         }
         @include sm {
             grid-template-rows: 300px 182px;
-            //padding: 0 20px 0 20px;
             max-height: 494px;
             margin: 0;
-            //padding: 20px;
         }
     }
     
@@ -139,11 +133,6 @@
         border: none;
         background-size: cover;
         grid-area: b1;
-        // @include md {
-        //     max-height: 300px;
-        //     max-width: 294px;
-        //     text-size-adjust: 100%;
-        // }
     }
     
     .posts-item__title {
@@ -157,20 +146,15 @@
         grid-template-areas: 'c1' 'c2';
         grid-gap: 35px;
         align-content: center;
-        // @include lg {
-        //     padding: 20px 0 20px 0;
-        // }
         @include md {
             min-height: 274px;
-            //padding: 0 20px 0 20px;
         }
         @include md {
             padding: 0 20px 0 20px;
         }
         @include sm {
             padding: 0 20px 0 20px;
-            grid-template-columns: 454px;
-            //grid-template-rows: 0px;
+            grid-template-columns: auto;
             min-height: 182px;
         }
     }
@@ -191,7 +175,6 @@
         grid-area: c1;
         align-content: end;
         @include sm {
-            //align-content: center;
             letter-spacing: .056rem;
         }
     }
@@ -212,9 +195,10 @@
         justify-content: center;
         grid-area: c2;
         align-content: start;
-        // @include sm {
-        //     max-width: 454px;
-        // }
+        @include sm {
+            position: relative;
+            max-width: max-content;
+        }
     }
     
     .posts-item:hover .posts-item__overlay {

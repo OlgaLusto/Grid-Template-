@@ -101,6 +101,7 @@
         }
         @include sm {
             display: none;
+            background-color: $color-gray-light;
         }
     }
     
@@ -121,7 +122,6 @@
             justify-items: center;
         }
         @include md {
-            //display: block;
             margin: auto;
             align-items: center;
             justify-items: center;

@@ -10,8 +10,11 @@
         &__title {
             margin: 0 0 53px;
             text-align: center;
+            @include md {
+                margin: 0 0 40px;
+            }
             @include sm {
-                margin: 0 0 48px;
+                margin: 0 0 44px;
             }
         }
         &__buttons {
@@ -21,6 +24,7 @@
             justify-content: center;
             @include sm {
                 flex-direction: column;
+                margin: auto;
             }
         }
     }
