@@ -7,8 +7,14 @@
         margin-top: 75px;
         background-color: $color-primary;
         flex: 0 0 auto;
+        @include ul-min {
+            margin-top: 100px;
+        }
         @include lg {
             margin-top: 60px;
+        }
+        @include md {
+            margin-top: 40px;
         }
         @include sm {
             margin-top: 40px;
@@ -36,13 +42,13 @@
     
     .footer-title__p1 {
         font-weight: lighter;
-        font-style: $font-main;
+        font-family: 'Roboto'; //sans-serif;
         letter-spacing: .33rem;
     }
     
     .footer-title__p2 {
         font-weight: 700;
-        font-style: $font-main;
+        font-family: 'Roboto';
         letter-spacing: .05rem;
         color: $color-gray-light;
     }

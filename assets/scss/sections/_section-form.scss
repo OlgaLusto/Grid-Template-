@@ -20,11 +20,15 @@
 
 .form-group__input {
     display: grid;
+    color: #fff;
     margin: 0 25px 0 25px;
     padding-top: 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'a1 a2 a3';
     grid-gap: 20px;
+    @include ul-min {
+        grid-template-columns: 420.5px 420.5px 420.5px;
+    }
     @include md {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'a1 a1' 'a2 a3';
@@ -44,7 +48,7 @@
     font-size: 1.15rem;
     height: 60px;
     transition: .5s;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     margin: 0;
     border: 2px solid rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.25);
@@ -53,7 +57,6 @@
 .form-group__input input:nth-of-type(1) {
     padding-left: 30px;
     letter-spacing: .16rem;
-    color: #fff;
     background-color: $color-input;
     grid-area: a1;
 }
@@ -83,11 +86,13 @@
     border-right-color: rgba(255, 255, 255, .3);
     border-bottom-color: rgba(255, 255, 255, 1.0);
     border-left-color: rgba(255, 255, 255, .3);
-    background-color: #4c546b;
+    background-color: rgba(255, 255, 255, .15);
 }
 
-input:hover::placeholder {
-    color: rgba(255, 255, 255, .5);
+input:hover::placeholder,
+input:focus::placeholder {
+    color: rgba(255, 255, 255, .3);
+    font-weight: 100;
 }
 
 button:active,

@@ -1,5 +1,10 @@
     .posts {
         padding: 25px;
+        @include ul-min {
+            max-width: 1300px;
+            margin: 65px auto auto auto;
+            padding: 0;
+        }
         @include lg {
             padding: 20px;
         }
@@ -54,7 +59,7 @@
     .posts-item {
         position: relative;
         overflow: hidden;
-        max-height: 550px;
+        max-height: 538px;
         &:nth-of-type(1) {
             grid-area: a1;
         }
@@ -129,7 +134,7 @@
         left: 0;
         max-height: 300px;
         transition: transform .5s;
-        transition: max-height 300px;
+        //transition: max-height 300px;
         border: none;
         background-size: cover;
         grid-area: b1;
